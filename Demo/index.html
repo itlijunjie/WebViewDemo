@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>play audio</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <button id="playButton" style="width: 100%; height: 100px; font-size: 48px">
+      play
+    </button>
+
+    <script>
+      // 创建音效对象
+      var audio = new Audio(
+        'https://asset.txqn.huohua.cn/assets/103edf50-02f7-40db-a562-a6730e5ea5b9.mp3'
+      );
+      // 获取按钮元素
+      var playButton = document.getElementById('playButton');
+      // 添加点击事件监听器
+      playButton.addEventListener('click', function () {
+        // 播放音效
+        audio.play();
+        setTimeout(() => {
+          audio.pause();
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
